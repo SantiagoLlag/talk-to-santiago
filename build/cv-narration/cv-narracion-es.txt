@@ -1,0 +1,33 @@
+Este es el CV de Santiago Llaguno, leído en voz alta.
+
+Santiago se presenta como arquitecto de IA especializado en agentes de voz. Diseña e implementa soluciones agénticas y de IA conversacional de punta a punta, del diagnóstico al despliegue, con agentes de voz sobre ElevenLabs y Claude. En 2026 fundó Sonelo, que hace plataformas personalizadas de role play con IA conversacional, agentes de compra y agentes que automatizan procesos, como contestar llamadas y agendar citas. Estudió matemáticas aplicadas, es Claude Certified Architect, nivel Professional, y participa activamente en eventos y hackathons de IA. Ha vivido en cuatro países: México, Argentina, España y Canadá.
+
+Trabajo seleccionado.
+
+Un entrenador de ventas por voz, Sonelo Trainer: role play de ventas con un comprador de IA. Claude califica cada llamada con una rúbrica de producto, objeciones, cierre y financiamiento. Funciona para retail, bienes raíces y automotriz, y tiene tiempo compartido en pruebas.
+
+Un agente de compra por voz para una operadora de buceo. Recomienda viajes según el perfil, consulta la disponibilidad en vivo y deriva al equipo los temas de salud o riesgo, con evals de derivación, reservas, disponibilidad y exactitud.
+
+Y voz y datos para organizaciones sociales: un asistente de voz con información pública, probado con un golden set de cuarenta y cinco casos; una plataforma que señala incongruencias en archivos financieros; y una plataforma de indicadores con IA para una fundación.
+
+Experiencia.
+
+Desde 2026 es fundador y Forward Deployed Engineer de Sonelo, que tiene dos líneas: Sonelo Trainer, para práctica de ventas, y Sonelo Solutions, agentes que contestan llamadas, agendan citas y hacen recepción. Cada agente empieza con un mapa de las llamadas que va a atender y de dónde se atoran; de ese mapa salen sus evals.
+
+Desde 2024 es Global Real Estate Advisor en Los Cabos Sotheby's International Realty. Vendió siete de las quince unidades de un desarrollo en preventa, de la presentación a la entrega. Hoy construye agentes de voz para seguimiento a clientes, información y práctica de ventas del equipo; analiza datos, arma reportes y crea skills que automatizan procesos.
+
+De 2023 a 2025 fue cofundador y director de Datasphere, un software que rastreaba plataformas de delivery y daba a unos diez restaurantes de Madrid, Guadalajara y Ciudad de México comparación de precios y una estrategia mensual. En el mejor caso, cerca de veinte por ciento más ventas en doce meses, comparando el promedio de los últimos dos meses contra el periodo previo. Lo absorbió una empresa de gestión de delivery.
+
+De 2021 a 2022 fue analista de estrategia de negocio en Santgar, donde llevó la parte técnica y estratégica de una implementación de ERP de seis meses: migración de datos, estructura de la información y reportes para decidir.
+
+Y de 2017 a 2020 trabajó en Stratego Management y Right Source, con estudios de clima laboral en plantas de Toluca, Tijuana, Nogales y Monterrey, en grupos de veinte a cien personas. Antes automatizó con código el formato de miles de documentos semanales: de una semana de trabajo a uno o dos días.
+
+Su stack. Para agentes y voz: ElevenLabs Agents, la API de Claude, el Claude Agent SDK, Claude Code, MCP, Agentforce y el Vercel AI SDK. Para calidad: evals, golden sets, LLM como juez, rúbricas y derivación a humano. Para construir: TypeScript, Python, Next.js, Astro, React, Supabase, Vercel y Cloudflare.
+
+Certificaciones: Claude Certified Architect, Professional, de Anthropic, en septiembre de 2026; AI Fluency, de Anthropic, en mayo de 2026; y Claude Code 101, también de Anthropic.
+
+Educación: matemáticas aplicadas en el ITAM, en Ciudad de México, y la licenciatura en Psicología en la UNAM, en curso desde 2024.
+
+Idiomas: español nativo e inglés C2. Está disponible para viajar y para mudarse.
+
+Y fuera del trabajo: es instructor de buceo, juega ajedrez con rating FIDE de mil seiscientos, y le gustan la fotografía, la historia romana y la poesía.

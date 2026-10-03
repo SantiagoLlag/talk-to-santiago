@@ -1,0 +1,15 @@
+.vercel
+.DS_Store
+node_modules
+
+# Private working documents: they name clients and sources under confidentiality
+TRUTH-LEDGER.md
+ANALISIS-feedback-*.md
+PROPUESTA-demo-trainer.md
+DEMOS.md
+
+# Large media, served from the live site instead
+site/media/*.mp4
+
+# Duplicate of site/oda-al-martillo.mp3
+assets/

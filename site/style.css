@@ -1,0 +1,494 @@
+:root {
+  --mist: #E7EDF0;   /* cielo de la foto */
+  --foam: #F6F8F9;
+  --ink: #16273A;    /* saco azul marino */
+  --ink-soft: #4A5B6C;
+  --sea: #2D5E88;    /* Pacífico */
+  --stone: #B37A48;  /* roca del Arco al atardecer */
+  --focus: #2D5E88;
+  --measure: 38rem;
+  --gutter: clamp(1.25rem, 4vw, 4.5rem);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--mist);
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, serif;
+  font-optical-sizing: auto;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* ---------- Escenario ----------
+   Escritorio: la línea de voz continúa el horizonte real de la foto.
+   Arriba (cielo) el nombre; abajo (mar) la bio y la voz. --h lo fija app.js. */
+.stage {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  grid-template-rows: var(--h, 54svh) auto;
+  grid-template-areas:
+    "portrait sky"
+    "portrait sea";
+}
+
+.portrait {
+  grid-area: portrait;
+  align-self: start;
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  margin: 0;
+  overflow: hidden;
+  background: #9fb4c3;
+}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 44% 30%;
+  display: block;
+}
+
+.horizon {
+  position: absolute;
+  left: 0;
+  top: var(--h, 54svh);
+  width: 100%;
+  height: 140px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sky {
+  grid-area: sky;
+  align-self: end;
+  padding: 0 var(--gutter) clamp(1.25rem, 3.5vh, 2.25rem);
+}
+
+.lang {
+  position: fixed;
+  top: clamp(1.25rem, 3vh, 2rem);
+  right: var(--gutter);
+  display: flex;
+  gap: 1.25rem;
+  z-index: 3;
+  font-size: 1rem;
+}
+.lang button {
+  color: var(--ink-soft);
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+}
+.lang button[aria-pressed="true"] {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+.lang button:hover { color: var(--ink); }
+
+h1 {
+  font-weight: 300;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0;
+  font-variation-settings: "opsz" 72;
+}
+
+.sea {
+  grid-area: sea;
+  padding: clamp(1.5rem, 3.5vh, 2.25rem) var(--gutter) clamp(1.5rem, 4vh, 2.5rem);
+}
+.sea > p {
+  margin: 0 0 0.9rem;
+  max-width: var(--measure);
+  text-wrap: pretty;
+}
+.sea > p + p { color: var(--ink-soft); }
+
+/* ---------- Voz ---------- */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: clamp(1.5rem, 3vw, 2.5rem);
+  row-gap: 1.25rem;
+  margin: clamp(1.25rem, 3vh, 2rem) 0 1.25rem;
+}
+
+.call {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--ink);
+}
+.call:disabled { cursor: default; opacity: 0.55; border-bottom-color: transparent; }
+.call:not(:disabled):hover { color: var(--sea); border-bottom-color: var(--sea); }
+
+.dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--sea);
+  box-shadow: 0 0 0 0 rgba(45, 94, 136, 0);
+  transition: background 200ms, box-shadow 200ms;
+  flex: none;
+}
+.stage[data-call="live"] .dot {
+  background: transparent;
+  box-shadow: inset 0 0 0 2px var(--sea);
+}
+.stage[data-call="connecting"] .dot { background: var(--ink-soft); }
+
+.status {
+  margin: 0.6rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+  min-height: 1.55em;
+}
+
+/* ---------- CV: la tarjeta visible ---------- */
+.talk { max-width: 16rem; }
+.cv-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.45rem 1rem 0.45rem 0.45rem;
+  background: var(--foam);
+  border: 1px solid rgba(22, 39, 58, 0.16);
+  border-radius: 6px;
+  text-align: left;
+  transition: border-color 200ms, box-shadow 200ms;
+}
+.cv-card:hover {
+  border-color: var(--sea);
+  box-shadow: 0 6px 18px rgba(22, 39, 58, 0.12);
+}
+.cv-thumb {
+  width: 46px;
+  height: auto;
+  aspect-ratio: 320 / 453;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(22, 39, 58, 0.12);
+  transition: transform 200ms;
+}
+.cv-card:hover .cv-thumb { transform: translateY(-2px) rotate(-1.5deg); }
+.cv-title { display: block; font-size: 1.125rem; line-height: 1.2; }
+.cv-sub { display: block; font-size: 0.8125rem; color: var(--ink-soft); }
+
+/* La hoja del CV: grande, con zoom y con la narración a un clic. */
+.cv-dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: min(62rem, calc(100vw - 2rem));
+  max-width: none;
+  height: calc(100svh - 2rem);
+  max-height: none;
+}
+.cv-dialog::backdrop { background: rgba(22, 39, 58, 0.42); backdrop-filter: blur(3px); }
+.cv-dialog[open] { animation: rise 260ms ease-out; }
+.cv-dialog .sheet {
+  padding: 0;
+  height: 100%;
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.cv-head {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.25rem;
+  padding: 0.8rem 3.25rem 0.8rem 1.25rem;
+  background: var(--foam);
+  border-bottom: 1px solid rgba(22, 39, 58, 0.1);
+}
+.cv-head h2 { margin: 0; font-weight: 300; font-size: 1.5rem; }
+.cv-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.1rem;
+  margin-left: auto;
+}
+.cv-tools .play { margin: 0; }
+.zoom {
+  display: inline-flex;
+  border: 1px solid rgba(22, 39, 58, 0.22);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.zoom button { width: 2.25rem; height: 2rem; font-size: 1.2rem; line-height: 1; }
+.zoom button + button { border-left: 1px solid rgba(22, 39, 58, 0.22); }
+.zoom button:hover:not(:disabled) { background: rgba(45, 94, 136, 0.08); }
+.zoom button:disabled { opacity: 0.35; cursor: default; }
+.cv-download {
+  font-size: 0.9375rem;
+  color: var(--foam);
+  background: var(--ink);
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.cv-download:hover { background: var(--sea); }
+.cv-head .close { top: 0.55rem; }
+.cv-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  background: #fff;
+  overscroll-behavior: contain;
+}
+.cv-page { display: block; width: calc(100% * var(--cv-zoom, 1)); max-width: none; height: auto; }
+
+/* Aviso de que la llamada con el agente está en pausa. */
+.call-note { margin: 0; font-size: 0.875rem; line-height: 1.4; color: var(--sea); }
+.cv-head .call-note,
+.demo-head .call-note { flex-basis: 100%; }
+.poem-dialog .call-note { margin: -0.6rem 0 1.1rem; }
+
+/* ---------- Demos: una ventana con el demo dentro ---------- */
+.demo-dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: min(80rem, calc(100vw - 2rem));
+  max-width: none;
+  height: calc(100svh - 2rem);
+  max-height: none;
+}
+.demo-dialog::backdrop { background: rgba(22, 39, 58, 0.5); backdrop-filter: blur(3px); }
+.demo-dialog[open] { animation: rise 260ms ease-out; }
+.demo-sheet {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--foam);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(22, 39, 58, 0.28);
+}
+.demo-head {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.25rem;
+  padding: 0.8rem 3.25rem 0.8rem 1.25rem;
+  border-bottom: 1px solid rgba(22, 39, 58, 0.1);
+}
+.demo-head h2 { margin: 0; font-weight: 300; font-size: 1.35rem; line-height: 1.2; }
+.demo-newtab { margin-left: auto; font-size: 0.9375rem; color: var(--sea); text-underline-offset: 3px; }
+.demo-head .close { top: 0.55rem; }
+#demo-frame { flex: 1; min-height: 0; width: 100%; border: 0; background: #fff; }
+
+/* ---------- Brand film: la misma ventana, con un video en vez del demo ---------- */
+.film-dialog { width: min(64rem, calc(100vw - 2rem)); height: fit-content; }
+#film-video { display: block; width: 100%; aspect-ratio: 16 / 9; max-height: calc(100svh - 8rem); background: #0b1620; }
+
+/* ---------- Ejemplos (desplegable discreto) ---------- */
+.extras {
+  margin: 0 0 1.1rem;
+  max-width: var(--measure);
+  font-size: 0.9375rem;
+}
+.extras summary {
+  cursor: pointer;
+  color: var(--ink-soft);
+  width: fit-content;
+  list-style: none;
+  padding: 0.2rem 0;
+}
+.extras summary::-webkit-details-marker { display: none; }
+.extras summary::after {
+  content: "+";
+  display: inline-block;
+  margin-left: 0.45rem;
+  transition: transform 200ms;
+}
+.extras[open] summary::after { transform: rotate(45deg); }
+.extras summary:hover { color: var(--ink); }
+.extras ul {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0 0 0 0.9rem;
+  border-left: 1px solid rgba(22, 39, 58, 0.18);
+}
+.extras li { padding: 0.3rem 0; }
+.extras li > span { display: block; font-size: 0.8125rem; color: var(--ink-soft); }
+.extras a { color: var(--ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.extras a:hover { color: var(--sea); }
+#open-poem { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+#open-poem em { font-style: italic; }
+#open-poem:hover { color: var(--stone); }
+
+/* ---------- El poema, en una hoja encima ---------- */
+.poem-dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(34rem, calc(100vw - 2rem));
+  width: 100%;
+  max-height: calc(100svh - 2rem);
+  color: var(--ink);
+}
+.poem-dialog::backdrop {
+  background: rgba(22, 39, 58, 0.42);
+  backdrop-filter: blur(3px);
+}
+.poem-dialog[open] { animation: rise 260ms ease-out; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.sheet {
+  position: relative;
+  background: var(--foam);
+  border-radius: 6px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 24px 60px rgba(22, 39, 58, 0.28);
+  max-height: calc(100svh - 2rem);
+  overflow-y: auto;
+}
+.close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.9rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--ink-soft);
+  padding: 0.25rem 0.4rem;
+}
+.close:hover { color: var(--ink); }
+.poem-dialog h2 {
+  font-weight: 300;
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  line-height: 1.05;
+  margin: 0 0 0.35rem;
+}
+.poem-dialog h2 em { font-style: italic; }
+.by { margin: 0 0 1.1rem; font-size: 0.9375rem; color: var(--ink-soft); }
+.play {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1rem;
+  padding: 0.3rem 0;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--stone);
+}
+.play:hover { color: var(--stone); }
+.glyph {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.4rem 0 0.4rem 0.65rem;
+  border-color: transparent transparent transparent var(--stone);
+  flex: none;
+}
+.play[aria-pressed="true"] .glyph {
+  width: 0.65rem;
+  height: 0.8rem;
+  border: 0;
+  border-left: 0.22rem solid var(--stone);
+  border-right: 0.22rem solid var(--stone);
+}
+.verses p {
+  margin: 0 0 1.1rem;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.fine {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+  max-width: var(--measure);
+}
+
+/* ---------- Pantallas bajas: que todo quepa sin scroll ---------- */
+@media (min-width: 861px) and (max-height: 820px) {
+  body { font-size: 1rem; line-height: 1.5; }
+  .sea { padding-top: 1rem; padding-bottom: 0.75rem; }
+  .sea > p { margin-bottom: 0.5rem; }
+  .actions { margin: 0.7rem 0 0.35rem; }
+  .fine { font-size: 0.75rem; }
+  .status { margin-top: 0.3rem; }
+  .extras { margin-bottom: 0.7rem; }
+  .sky { padding-bottom: 1rem; }
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 860px) {
+  .stage { display: block; min-height: 0; }
+  .portrait {
+    position: relative;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-height: 78svh;
+    width: 100%;
+  }
+  .horizon {
+    position: relative;
+    top: auto;
+    transform: none;
+    display: block;
+    height: 64px;
+  }
+  .lang {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(246, 248, 249, 0.85);
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+  }
+  .sky { padding: 0 1rem 0.5rem; }
+  .sea { padding: 1rem 1rem 2.5rem; }
+  .actions { flex-direction: column; }
+  .cv-card { width: 100%; }
+  /* CV y demos a pantalla completa en el teléfono. */
+  .cv-dialog, .demo-dialog { width: 100vw; height: 100svh; max-height: 100svh; margin: 0; }
+  .cv-dialog .sheet, .demo-sheet { border-radius: 0; }
+  .cv-head, .demo-head { padding: 0.7rem 3rem 0.7rem 1rem; }
+  .cv-tools, .demo-newtab { margin-left: 0; }
+  .film-dialog .demo-sheet { background: #0b1620; }
+  .film-dialog .demo-head { background: var(--foam); }
+  #film-video { flex: 1; min-height: 0; aspect-ratio: auto; max-height: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
