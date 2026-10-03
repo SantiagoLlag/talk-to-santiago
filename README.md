@@ -1,8 +1,8 @@
 # Talk to Santiago
 
-A voice agent that introduces Santiago Llaguno to recruiters and opens his demos. Live at [santiago-llaguno.vercel.app](https://santiago-llaguno.vercel.app), in Spanish and English.
+A voice agent that introduces me (Santiago Llaguno) to recruiters and opens my demos. Live at [santiago-llaguno.vercel.app](https://santiago-llaguno.vercel.app), in Spanish and English.
 
-This repo holds the page, the prompts, the knowledge base and the tests of that agent, so you can see how it was built and how it is kept honest.
+This repo holds the page, the prompts, the knowledge base and the tests of that agent, so you can see how it was built.
 
 ## What is here
 
