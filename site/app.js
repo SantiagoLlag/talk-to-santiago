@@ -4,7 +4,7 @@
 
   // Los demos se abren en una ventana sobre la página y traen su propio agente de voz.
   const DEMOS = {
-    oleada_sales_room: { es: "https://vista-privada.vercel.app/", en: "https://vista-privada.vercel.app/" },
+    oleada_sales_room: { es: "https://loscabos-sir-ai.vercel.app/", en: "https://loscabos-sir-ai.vercel.app/" },
     dive_commerce_agent: { es: "https://nautilus-clone.vercel.app/", en: "https://nautilus-clone.vercel.app/" },
     sales_trainer: {
       es: "https://voice-sales-trainer-demo.vercel.app/?lang=es",
@@ -13,7 +13,7 @@
   };
   const DEMO_TITLE = { oleada_sales_room: "demoOleada", dive_commerce_agent: "demoDive", sales_trainer: "demoTrainer" };
   // Los jpg y mp3 se cachean 7 días (vercel.json): subir esta versión al regenerar el CV.
-  const CV_VERSION = "2026-10-02";
+  const CV_VERSION = "2026-11-14";
 
   const T = {
     es: {
@@ -47,7 +47,7 @@
       zoom: "Tamaño del CV",
       zoomIn: "Ampliar",
       zoomOut: "Reducir",
-      demoOleada: "Sala de ventas con concierge de voz · Oleada Los Cabos",
+      demoOleada: "Cuatro piezas de IA, con la sala de ventas de Oleada · Los Cabos Sotheby's",
       filmTitle: "Brand film de Oleada, narrado con ElevenLabs v4",
       filmSub: "Video de 88 segundos, en inglés",
       demoDive: "Agente de compra por voz para viajes de buceo",
@@ -62,7 +62,7 @@
       title: "Santiago Llaguno",
       // Al retomar, el agente abre con esta frase en vez de volver a presentarse.
       back: {
-        oleada_sales_room: "Ya regresé. ¿Qué te pareció la sala de Oleada?",
+        oleada_sales_room: "Ya regresé. ¿Qué te pareció lo que viste de Sotheby's?",
         film: "Aquí sigo. ¿Qué te pareció el video?",
         dive_commerce_agent: "Ya regresé. ¿Qué te pareció el agente de buceo?",
         sales_trainer: "Ya regresé. ¿Cómo te fue con el entrenador de ventas?",
@@ -72,7 +72,7 @@
         again: "Hola de nuevo. ¿Qué más quieres saber de Santiago?",
       },
       why: {
-        oleada_sales_room: "La llamada se pausó mientras la persona probaba la sala de ventas de Oleada, que tiene su propia concierge de voz; ya la cerró.",
+        oleada_sales_room: "La llamada se pausó mientras la persona veía las piezas de IA de Los Cabos Sotheby's, entre ellas la sala de ventas de Oleada con su propia concierge de voz; ya cerró la ventana.",
         film: "La llamada se pausó mientras la persona veía el brand film de Oleada.",
         dive_commerce_agent: "La llamada se pausó mientras la persona probaba el demo del agente de compra de viajes de buceo, que tiene su propio agente de voz; ya lo cerró.",
         sales_trainer: "La llamada se pausó mientras la persona probaba el demo del entrenador de ventas, que tiene su propio agente de voz; ya lo cerró.",
@@ -116,7 +116,7 @@
       zoom: "CV size",
       zoomIn: "Zoom in",
       zoomOut: "Zoom out",
-      demoOleada: "Sales room with a voice concierge · Oleada Los Cabos",
+      demoOleada: "Four AI pieces, with the Oleada sales room · Los Cabos Sotheby's",
       filmTitle: "Oleada brand film, narrated with ElevenLabs v4",
       filmSub: "An 88-second video",
       demoDive: "Voice shopping agent for dive trips",
@@ -130,7 +130,7 @@
       photoAlt: "Santiago Llaguno smiling in front of the Arch of Cabo San Lucas",
       title: "Santiago Llaguno",
       back: {
-        oleada_sales_room: "I'm back. What did you think of the Oleada sales room?",
+        oleada_sales_room: "I'm back. What did you think of the Sotheby's pieces?",
         film: "Still here. What did you think of the video?",
         dive_commerce_agent: "I'm back. What did you think of the dive-trip agent?",
         sales_trainer: "I'm back. How did it go with the sales trainer?",
@@ -140,7 +140,7 @@
         again: "Hi again. What else would you like to know about Santiago?",
       },
       why: {
-        oleada_sales_room: "The call was paused while the visitor tried the Oleada sales room, which has its own voice concierge; they've closed it now.",
+        oleada_sales_room: "The call was paused while the visitor explored the Los Cabos Sotheby's AI pieces, including the Oleada sales room with its own voice concierge; they've closed the window now.",
         film: "The call was paused while the visitor watched the Oleada brand film.",
         dive_commerce_agent: "The call was paused while the visitor tried the dive-trip shopping agent demo, which has its own voice agent; they've closed it now.",
         sales_trainer: "The call was paused while the visitor tried the sales trainer demo, which has its own voice agent; they've closed it now.",

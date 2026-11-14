@@ -1,33 +1,31 @@
 Este es el CV de Santiago Llaguno, leído en voz alta.
 
-Santiago se presenta como arquitecto de IA especializado en agentes de voz. Diseña e implementa soluciones agénticas y de IA conversacional de punta a punta, del diagnóstico al despliegue, con agentes de voz sobre ElevenLabs y Claude. En 2026 fundó Sonelo, que hace plataformas personalizadas de role play con IA conversacional, agentes de compra y agentes que automatizan procesos, como contestar llamadas y agendar citas. Estudió matemáticas aplicadas, es Claude Certified Architect, nivel Professional, y participa activamente en eventos y hackathons de IA. Ha vivido en cuatro países: México, Argentina, España y Canadá.
+Santiago se presenta como arquitecto de IA especializado en agentes conversacionales y de voz. Diseña e implementa soluciones agénticas y de IA conversacional de punta a punta: entiende el proceso del cliente, construye la solución de manera creativa y medible, optimizando los recursos, y mide la calidad de cada solución con evaluaciones a la medida. Trabaja sobre Claude, con su API, el Agent SDK y MCP, y sobre ElevenLabs Agents, en voz y en texto. Es Claude Certified Architect, nivel Professional, y estudió matemáticas aplicadas en ciencias de la computación. Aporta capacidad analítica, experiencia directa en ventas y dominio técnico para desarrollar agentes, soluciones agénticas y software adaptados a las necesidades y los procesos de cada negocio. En 2026 fundó Sonelo, que hace plataformas de role play con IA conversacional y agentes de compra para agencias de bienes raíces, salas de tiempos compartidos, salas de ventas automotrices y tiendas de joyería.
 
 Trabajo seleccionado.
 
-Un entrenador de ventas por voz, Sonelo Trainer: role play de ventas con un comprador de IA. Claude califica cada llamada con una rúbrica de producto, objeciones, cierre y financiamiento. Funciona para retail, bienes raíces y automotriz, y tiene tiempo compartido en pruebas.
+Una sala de ventas virtual con voz, en Los Cabos Sotheby's International Realty. Santiago diseñó y desarrolló una sala de ventas virtual para las propiedades y desarrollos de lujo. Aplicó su experiencia como asesor para modelar la conversación de venta e integró agentes de voz con automatizaciones de llamadas, correos y mensajes, para crear una experiencia inmersiva que aumente la interacción de los clientes, automatice la captación de leads y mejore su retención.
 
-Un agente de compra por voz para una operadora de buceo. Recomienda viajes según el perfil, consulta la disponibilidad en vivo y deriva al equipo los temas de salud o riesgo, con evals de derivación, reservas, disponibilidad y exactitud.
+Un entrenador de ventas por voz, Sonelo Trainer. Santiago desarrolló una plataforma de role play para salas de ventas. Diseñó arquetipos de clientes a partir de los procesos y datos de cada empresa, para practicar de manera realista con IA, y un análisis de cada entrenamiento que da observabilidad del desempeño y las capacidades del personal. La plataforma acelera el entrenamiento y el onboarding y busca elevar las ventas promedio.
 
-Y voz y datos para organizaciones sociales: un asistente de voz con información pública, probado con un golden set de cuarenta y cinco casos; una plataforma que señala incongruencias en archivos financieros; y una plataforma de indicadores con IA para una fundación.
+Un agente de compra por voz, adaptable al catálogo de cada negocio. Santiago lo diseñó para vender como un buen asesor: recomienda según el perfil del cliente, consulta la disponibilidad en vivo en lugar de suponerla y pasa a una persona los temas delicados. Construyó la primera versión con datos públicos de una operadora de viajes de buceo y diseñó siete bloques de evaluaciones a la medida para validarla.
+
+Y una plataforma de presupuesto e indicadores para una de las fundaciones más grandes de Los Cabos. Santiago diseñó y desarrolló una plataforma a la medida, con IA integrada, que unifica sus archivos de presupuesto, ingresos y gastos en una sola fuente confiable. Sus reportes de administración y del consejo pasaron de horas a minutos. Le construyó herramientas a la medida para crear visuales y controles que avisan si un dato no cuadra. También diseñó e imparte a su equipo un curso de IA aplicada al trabajo diario, de ocho sesiones.
+
+En build days: en San Francisco, con Anthropic, en septiembre de 2026, construyó Praise Gap, que examina reseñas de competidores y conserva solo lo que sobrevive una verificación adversarial. Y en Ciudad de México, con Salesforce y Anthropic, en agosto de 2026, un agente de briefings de CRM en Agentforce, con voz y evals de carga cognitiva.
 
 Experiencia.
 
-Desde 2026 es fundador y Forward Deployed Engineer de Sonelo, que tiene dos líneas: Sonelo Trainer, para práctica de ventas, y Sonelo Solutions, agentes que contestan llamadas, agendan citas y hacen recepción. Cada agente empieza con un mapa de las llamadas que va a atender y de dónde se atoran; de ese mapa salen sus evals.
+Desde 2026 es fundador y Forward Deployed Engineer de Sonelo, donde diseñó y desarrolló dos líneas de negocio: Sonelo Trainer, con la que facilita la capacitación y el onboarding de equipos de ventas, y Sonelo Solutions, con la que automatiza la atención de llamadas, la agenda de citas y la recepción. Su método: mapea las conversaciones que cada agente va a atender y dónde se atoran, y de ese mapa diseña sus evaluaciones.
 
-Desde 2024 es Global Real Estate Advisor en Los Cabos Sotheby's International Realty. Vendió siete de las quince unidades de un desarrollo en preventa, de la presentación a la entrega. Hoy construye agentes de voz para seguimiento a clientes, información y práctica de ventas del equipo; analiza datos, arma reportes y crea skills que automatizan procesos.
+Desde 2024 es Global Real Estate Advisor en Los Cabos Sotheby's International Realty. Vendió siete de las quince unidades de un desarrollo en preventa, de la presentación a la entrega, y más de dos millones de dólares en su primer año, apoyado en corridas financieras, eventos y material audiovisual propios. Hoy desarrolla IA para la oficina: la sala de ventas virtual, análisis de datos y capacitación de los asesores.
 
-De 2023 a 2025 fue cofundador y director de Datasphere, un software que rastreaba plataformas de delivery y daba a unos diez restaurantes de Madrid, Guadalajara y Ciudad de México comparación de precios y una estrategia mensual. En el mejor caso, cerca de veinte por ciento más ventas en doce meses, comparando el promedio de los últimos dos meses contra el periodo previo. Lo absorbió una empresa de gestión de delivery.
+De 2023 a 2025 fue cofundador y director de Datasphere, un software que rastreaba plataformas de delivery para unos diez restaurantes de Madrid, Guadalajara y Ciudad de México. Permitía comparar precios y elaborar la estrategia de cada mes. En el mejor caso, logró cerca de veinte por ciento más ventas en doce meses. Lo absorbió una empresa de gestión de delivery.
 
-De 2021 a 2022 fue analista de estrategia de negocio en Santgar, donde llevó la parte técnica y estratégica de una implementación de ERP de seis meses: migración de datos, estructura de la información y reportes para decidir.
+De 2021 a 2022 fue analista de estrategia de negocio en Santgar, donde hizo la parte técnica y estratégica de la implementación de un ERP en seis meses: migración de datos, estructura de la información y reportes que facilitaron la toma de decisiones.
 
-Y de 2017 a 2020 trabajó en Stratego Management y Right Source, con estudios de clima laboral en plantas de Toluca, Tijuana, Nogales y Monterrey, en grupos de veinte a cien personas. Antes automatizó con código el formato de miles de documentos semanales: de una semana de trabajo a uno o dos días.
+Y de 2017 a 2020 trabajó en Stratego Management y Right Source. En Stratego, como gerente de clima laboral, realizó estudios en plantas de México con grupos de veinte a cien personas. En Right Source, como analista de documentación y procesos, automatizó con Python y macros de Office el formato de documentos, y redujo una semana de trabajo a días.
 
-Su stack. Para agentes y voz: ElevenLabs Agents, la API de Claude, el Claude Agent SDK, Claude Code, MCP, Agentforce y el Vercel AI SDK. Para calidad: evals, golden sets, LLM como juez, rúbricas y derivación a humano. Para construir: TypeScript, Python, Next.js, Astro, React, Supabase, Vercel y Cloudflare.
+Certificaciones y herramientas. Es Claude Certified Architect, Professional, de Anthropic, desde septiembre de 2026. Con Claude usa la API, el Claude Agent SDK, Claude Code y MCP. Para voz y agentes: ElevenLabs Agents, Agentforce y el Vercel AI SDK. Para calidad: evals, golden sets, LLM como juez, rúbricas y derivación a humano. Y para construir: TypeScript, Python, Next.js, Astro, React, Supabase, Vercel y Cloudflare.
 
-Certificaciones: Claude Certified Architect, Professional, de Anthropic, en septiembre de 2026; AI Fluency, de Anthropic, en mayo de 2026; y Claude Code 101, también de Anthropic.
-
-Educación: matemáticas aplicadas en el ITAM, en Ciudad de México, y la licenciatura en Psicología en la UNAM, en curso desde 2024.
-
-Idiomas: español nativo e inglés C2. Está disponible para viajar y para mudarse.
-
-Y fuera del trabajo: es instructor de buceo, juega ajedrez con rating FIDE de mil seiscientos, y le gustan la fotografía, la historia romana y la poesía.
+Educación e idiomas. Matemáticas aplicadas en el ITAM, en Ciudad de México, y la licenciatura en Psicología en la UNAM, en curso desde 2024. Habla español nativo e inglés C2, y está disponible para viajar y para mudarse.
