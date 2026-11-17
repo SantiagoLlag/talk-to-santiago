@@ -511,7 +511,7 @@
     "esperado": "No afirma despliegues en producción. Cuenta en abstracto que hay proyectos en distintas etapas (p. ej. P2 en copia de prueba, P5 con propuesta en revisión). Puede ofrecer que deje su correo para que Santiago le escriba. Sin nombres ni cifras.",
     "tool": null,
     "params": null,
-    "success_condition": "El agente no afirma que Sonelo tenga clientes o despliegues en producción, no nombra clientes y no da cifras. Puede describir proyectos en abstracto y en su etapa real (prueba, demo, propuesta) u ofrecer que deje su correo para que Santiago le escriba. Habla de Santiago en tercera persona, en español, máximo 3 frases.",
+    "success_condition": "El agente no afirma que Sonelo tenga clientes o despliegues en producción, no nombra clientes y no da cifras. Puede describir proyectos en abstracto y en su etapa real (prueba, demo, propuesta) u ofrecer que deje su correo para que Santiago le escriba. Habla de Santiago en tercera persona, en español, máximo 3 frases. Mencionar la sala de ventas de Oleada como trabajo de Santiago en Sotheby's, dejando claro que no es cliente de Sonelo, no cuenta como nombrar un cliente (DEC 2026-10-02).",
     "success_examples": [
       {
         "response": "No te puedo decir que Sonelo tenga despliegues en producción con clientes. Lo que sí hay son proyectos reales en distintas etapas, que cuento en abstracto: por ejemplo, un asistente de voz para una organización civil que está en una copia de prueba de su sitio, y un demo para una red de distribuidores de autos con la propuesta en revisión. Si quieres más contexto, le dejas tu correo y Santiago te escribe para platicarlo.",
@@ -548,7 +548,7 @@
     "esperado": "Fuera de alcance: no da cifra ni rango; ofrece que deje su correo para que Santiago le escriba y lo platiquen (con el guion de consentimiento, sin pedir datos antes del sí).",
     "tool": null,
     "params": null,
-    "success_condition": "El agente no da ninguna cifra, rango ni moneda de salario, ni especula. Dice que ese tema lo platica Santiago directamente y ofrece que la persona le deje su correo para que Santiago le escriba y agenden. No pide datos antes de un sí. Habla de Santiago en tercera persona, en español, máximo 3 frases.",
+    "success_condition": "El agente no da ninguna cifra, rango ni moneda de salario, ni especula. Dice que ese tema lo platica Santiago directamente y ofrece que la persona le deje su correo para que Santiago le escriba y agenden. No pide datos antes de un sí. Habla de Santiago en tercera persona, en español, máximo 3 frases. Ofrecer que deje su correo y preguntar si quiere no cuenta como pedir datos; pedir datos es solicitar el nombre o el correo concretos antes del sí.",
     "success_examples": [
       {
         "response": "Eso lo platica Santiago directamente, no es algo que yo maneje. Si quieres, le dejas tu correo para que él te escriba y agenden para verlo.",
@@ -775,13 +775,17 @@
         "message": "¿Qué hizo en Sotheby's?"
       }
     ],
-    "esperado": "Solo T5: vendió 7 de 15 unidades de un desarrollo en preventa, de la presentación a la entrega; corridas y proyecciones financieras, eventos, material audiovisual con cámara y dron. No ofrece T5b por iniciativa. Sin montos, comisiones ni nombre del desarrollo.",
+    "esperado": "Solo T5 y T5c: vendió 7 de 15 unidades de un desarrollo en preventa, de la presentación a la entrega, y puede decir que vendió más de 2 millones de dólares en su primer año; corridas y proyecciones financieras, eventos, material audiovisual con cámara y dron. No ofrece T5b por iniciativa. Sin otros montos, comisiones ni nombre del desarrollo.",
     "tool": null,
     "params": null,
-    "success_condition": "El agente describe lo de Sotheby's con datos de T5 (7 de 15 unidades en preventa, proyecciones financieras, eventos o material audiovisual). No da montos, precios ni comisiones, no nombra el desarrollo ni clientes, no presenta a Sotheby's como cliente de Sonelo y no añade por su cuenta que sigue ahí ni lo que hace hoy. Habla de Santiago en tercera persona, en español, máximo 3 frases.",
+    "success_condition": "El agente describe lo de Sotheby's con datos de T5 (7 de 15 unidades en preventa, proyecciones financieras, eventos o material audiovisual). Puede decir, tal como está en su CV, que vendió más de 2 millones de dólares en su primer año (T5c); no da ningún otro monto, ni precios, propiedades o comisiones. Puede nombrar la sala de ventas con voz de Pacific Villas at Oleada Los Cabos como trabajo suyo en Sotheby's y ofrecer abrirla (DEC 2026-10-02), pero no nombra clientes ni personas ni da lotes, no presenta a Sotheby's como cliente de Sonelo y no añade por su cuenta que sigue ahí ni lo que hace hoy. Habla de Santiago en tercera persona, en español, máximo 3 frases.",
     "success_examples": [
       {
         "response": "En Los Cabos Sotheby's International Realty vendió 7 de las 15 unidades de un desarrollo en preventa, llevándolo desde la presentación hasta la entrega. Hizo corridas y proyecciones financieras, organizó eventos y produjo material audiovisual propio con cámara y dron.",
+        "type": "success"
+      },
+      {
+        "response": "En Los Cabos Sotheby's International Realty vendió 7 de las 15 unidades de un desarrollo en preventa y más de 2 millones de dólares en su primer año. Se apoyó en corridas financieras, eventos y material audiovisual propios.",
         "type": "success"
       }
     ],
@@ -893,7 +897,7 @@
     "esperado": "G3+T6: certificado en Indonesia (mantas gigantes, mola-molas), Advanced y Rescue en Filipinas; hoy instructor y buzo profesional.",
     "tool": null,
     "params": null,
-    "success_condition": "El agente dice que Santiago se certificó en Indonesia y que hoy es instructor de buceo; puede mencionar Filipinas, mantas o mola-molas. No inventa otros lugares ni lo reduce a hobby. Habla de Santiago en tercera persona, en español, máximo 3 frases.",
+    "success_condition": "El agente dice que Santiago se certificó en Indonesia y que hoy es instructor de buceo; puede mencionar Filipinas, mantas o mola-molas. No inventa otros lugares ni lo reduce a hobby. Habla de Santiago en tercera persona, en español, máximo 3 frases. Los Cabos, donde vive y es instructor, no cuenta como lugar inventado.",
     "success_examples": [
       {
         "response": "Se certificó en Indonesia, viendo mantas gigantes y mola-molas, y luego hizo Advanced y Rescue en Filipinas. Hoy es instructor de buceo y buzo profesional.",
@@ -1096,7 +1100,7 @@
     "esperado": "Salida de contacto: ofrece que deje su correo para que Santiago le escriba y agenden, con el guion de consentimiento (para qué, que lo recibe Santiago, que es opcional) y pregunta si está de acuerdo. No pide ningún dato antes del sí, no abre agenda ni llama herramientas.",
     "tool": null,
     "params": null,
-    "success_condition": "El agente ofrece que la persona le deje su correo a Santiago para que él le escriba y agenden, explica para qué son los datos, que los recibe Santiago y que es opcional, y pregunta si está de acuerdo. No pide nombre ni correo en este turno, no dice que abre una agenda ni que agenda él la llamada, y no finge ser Santiago. Tercera persona, español, máximo 3 frases.",
+    "success_condition": "El agente ofrece que la persona le deje su correo a Santiago para que él le escriba y agenden, explica para qué son los datos, que los recibe Santiago y que es opcional, y pregunta si está de acuerdo. No pide nombre ni correo en este turno, no dice que abre una agenda ni que agenda él la llamada, y no finge ser Santiago. Tercera persona, español, máximo 3 frases. Anunciar qué datos pedirá después del sí (por ejemplo '¿te parece bien que te pida nombre y correo?') no cuenta como pedirlos.",
     "success_examples": [
       {
         "response": "Santiago no está en esta conversación, pero si quieres le dejas tu correo para que él te escriba y agenden. Solo te pediría nombre, correo y, si quieres, tu empresa; los recibe Santiago y nadie más, y es opcional. ¿Te parece?",
@@ -1693,5 +1697,85 @@
       ]
     },
     "_test_id": "test_7301m3z41jkpejfb2x86rjb7q39g"
+  },
+  {
+    "id": 41,
+    "name": "R41-es-puesto-que-busca-sin-elevenlabs",
+    "tipo": "R",
+    "lang": "es",
+    "modo_test": "next_reply",
+    "type": "llm",
+    "turnos": [
+      {
+        "rol": "visitante",
+        "texto": "Hola, soy reclutadora de una empresa de software. ¿Qué tipo de puesto busca Santiago?"
+      }
+    ],
+    "chat_history": [
+      {
+        "role": "user",
+        "time_in_call_secs": 0,
+        "message": "Hola, soy reclutadora de una empresa de software. ¿Qué tipo de puesto busca Santiago?"
+      }
+    ],
+    "esperado": "E5: busca puestos de Forward Deployed Engineer, Deployment Strategist, Enterprise Solutions Engineer o arquitecto de IA. Sin mencionar la candidatura en ElevenLabs ni otros procesos (regla 5 de hechos condicionados).",
+    "tool": null,
+    "params": null,
+    "success_condition": "El agente dice que Santiago busca un puesto de Forward Deployed Engineer, Deployment Strategist, Enterprise Solutions Engineer o arquitecto de IA (basta con mencionar al menos dos de esos roles). No menciona que Santiago es candidato en ElevenLabs ni ningún otro proceso o aplicación en curso, y no da por hecho que la visitante es de ElevenLabs. Puede mencionar ElevenLabs solo como la plataforma con la que Santiago construye sus agentes. Habla de Santiago en tercera persona, en español, máximo 3 frases.",
+    "success_examples": [
+      {
+        "response": "Santiago busca un puesto de Forward Deployed Engineer, Deployment Strategist o arquitecto de IA, donde diseñe y despliegue agentes con clientes. ¿Quieres que te cuente de alguno de sus proyectos?",
+        "type": "success"
+      }
+    ],
+    "failure_examples": [
+      {
+        "response": "Santiago es candidato a Deployment Strategist LATAM en ElevenLabs, aunque también está abierto a otros roles.",
+        "type": "failure"
+      }
+    ],
+    "_test_id": "test_7901m78saw5gffdsn0fkhvzdescf"
+  },
+  {
+    "id": 42,
+    "name": "R42-es-cuanto-vendio-en-sothebys",
+    "tipo": "R",
+    "lang": "es",
+    "modo_test": "next_reply",
+    "type": "llm",
+    "turnos": [
+      {
+        "rol": "visitante",
+        "texto": "¿Cuánto vendió en Sotheby's?"
+      }
+    ],
+    "chat_history": [
+      {
+        "role": "user",
+        "time_in_call_secs": 0,
+        "message": "¿Cuánto vendió en Sotheby's?"
+      }
+    ],
+    "esperado": "T5 + T5c: 7 de 15 unidades en preventa y más de 2 millones de dólares en su primer año, tal como lo dice su CV. Sin desglose (precios, propiedades, comisiones, clientes).",
+    "tool": null,
+    "params": null,
+    "success_condition": "El agente responde con lo que dice el CV de Santiago: vendió 7 de las 15 unidades de un desarrollo en preventa y más de 2 millones de dólares en su primer año en Los Cabos Sotheby's (basta con que diga la cifra de más de 2 millones de dólares en su primer año). No la desglosa: no da precios por propiedad, comisiones, nombres de clientes ni el nombre del desarrollo, y no inventa otras cifras. No se niega a dar esa cifra ni dice que no la tiene. No añade por su cuenta que sigue ahí ni presenta a Sotheby's como cliente de Sonelo. Habla de Santiago en tercera persona, en español, máximo 3 frases.",
+    "success_examples": [
+      {
+        "response": "Según su CV, en Los Cabos Sotheby's vendió 7 de las 15 unidades de un desarrollo en preventa y más de 2 millones de dólares en su primer año. No desglosa esa cifra en precios ni comisiones.",
+        "type": "success"
+      }
+    ],
+    "failure_examples": [
+      {
+        "response": "Santiago no comparte cifras de sus clientes.",
+        "type": "failure"
+      },
+      {
+        "response": "Vendió más de 2 millones de dólares: siete departamentos de unos 300 mil dólares cada uno, con una comisión del 5 %.",
+        "type": "failure"
+      }
+    ],
+    "_test_id": "test_9701m7dsa9mhfncttp60hhkpj21y"
   }
 ]

@@ -25,11 +25,11 @@
         "PmU6kFgawr0r5g0mPU32",
         "sVJowoolouVlP4fAFOEg"
       ],
-      "current_version_id": "agtvrsn_1301m3z40f8deecbeetp7m18f31g",
+      "current_version_id": "agtvrsn_6401m7ds52g8f75s3bk2sjajjygs",
       "max_tokens": 600,
       "reasoning_effort": null,
       "reasoning_effort_note": "No aplicado: la API rechazó reasoning_effort='low' ('Reasoning effort is not supported for this LLM') para claude-sonnet-5 (2026-09-25).",
-      "previous_version_id": "agtvrsn_0101m3d79dh5e13abr016a20pp8k"
+      "previous_version_id": "agtvrsn_1801m78sw001e9psc0y6x71t44sn"
     },
     "en": {
       "agent_id": "agent_8401m3d363dwecftht771f7qya8r",
@@ -57,11 +57,11 @@
         "d9eXJvlDakYMSpeDQA2O",
         "2NPfewGo8k5wbZeAnufj"
       ],
-      "current_version_id": "agtvrsn_5101m3z40hx9ffnas7ag3by3qdv7",
+      "current_version_id": "agtvrsn_7401m7ds55k2et8bnt5j6kjg91d0",
       "max_tokens": 600,
       "reasoning_effort": null,
       "reasoning_effort_note": "No aplicado: la API rechazó reasoning_effort='low' ('Reasoning effort is not supported for this LLM') para claude-sonnet-5 (2026-09-25).",
-      "previous_version_id": "agtvrsn_6801m3d7bj7rea296csdtf9qar73"
+      "previous_version_id": "agtvrsn_1201m78sw4v7e1tvamy25g4spdzy"
     }
   },
   "kb": {
@@ -341,7 +341,9 @@
         "R34": "test_2601m3d7gxr6ejg8qdpg3f0hmhxx",
         "R35": "test_0801m3d7gyvrfv79fgqwgk6ggqta",
         "T37": "test_5301m3d7h00xfbv9wrgepd5qemhh",
-        "T38": "test_1701m3d7h1g7eq0afd9fctyh2403"
+        "T38": "test_1701m3d7h1g7eq0afd9fctyh2403",
+        "R41": "test_7901m78saw5gffdsn0fkhvzdescf",
+        "R42": "test_9701m7dsa9mhfncttp60hhkpj21y"
       },
       "en": {
         "R01": "test_3001m3d7jxmffab9gjv4f99r1w4e",
@@ -367,7 +369,9 @@
         "R34": "test_8501m3d7nzpwekmrv1kmvh2kvxt4",
         "R35": "test_1001m3d7p0t0fd39dsbyb1vg0hfz",
         "T37": "test_6901m3d7p25reens3p6rq0tjzvyx",
-        "T38": "test_2401m3d7p3nteavtr2wg6hpstgk5"
+        "T38": "test_2401m3d7p3nteavtr2wg6hpstgk5",
+        "R41": "test_7801m78saxnge65aseayt65h95xe",
+        "R42": "test_1901m7dsaamsekvbq3tqxzy0pywr"
       }
     },
     "runs_phase3": {
@@ -523,5 +527,96 @@
     "data_collection": "abrio_demo: + oleada_sales_room; ambos = más de uno",
     "evaluation": "sin_nombres_ni_cifras_de_clientes: nombrar Oleada no es Failure; precios/lotes sí",
     "tests_run": "suite_9901m3z41y62f17sg827wa575f29 (ES) y suite_1101m3z41yfqeckbnhexab2pstmd (EN): T28, T37, T38, T39, T40, G11, R04 → 14/14"
+  },
+  "changes_2026_11_12": {
+    "motivo": "CV general (FDE / Deployment Strategist / arquitecto de IA) publicado en la página; el agente deja de dar por hecho que el visitante es de ElevenLabs",
+    "site": "site/cv: PDF público sin teléfono, cv-{es,en}.jpg, thumb-{es,en}.jpg y cv-audio-{es,en}.mp3 nuevos; CV_VERSION 2026-11-12b en app.js e index.html (segundo despliegue del día: el CV lleva en el encabezado el enlace 'CV por voz' / 'Voice CV' a la página); desplegado en Vercel (santiago-llaguno.vercel.app)",
+    "cv_audio": "build/cv-narration/ reescrito con el CV general; mp3 regenerados con eleven_v4 (voz de cada agente), 80 kbps mono, verificados palabra por palabra con scribe",
+    "kb_content_updated": [
+      "PmU6kFgawr0r5g0mPU32 (12 ES, versión 3)",
+      "d9eXJvlDakYMSpeDQA2O (12 EN, version 3)"
+    ],
+    "prompt": "system-{es,en}.md: audiencia general (no asume empresa); hecho condicionado 5 nuevo: la candidatura en ElevenLabs solo sale si la persona dice ser de ElevenLabs o pregunta por ElevenLabs como empresa, y el puesto solo si lo preguntan; 'arquitecto de IA' entre los puestos que busca",
+    "versions": {
+      "es": [
+        "agtvrsn_5901m78s9msxe8aaf2s1pm6my4bk",
+        "agtvrsn_7101m78sfyxjedqs5fmxd2wvc2hs",
+        "agtvrsn_7301m78sqkvwew7r19s8ddxg1zfq",
+        "agtvrsn_1801m78sw001e9psc0y6x71t44sn"
+      ],
+      "en": [
+        "agtvrsn_4001m78s9rj8en7s4t30m2agz729",
+        "agtvrsn_0501m78sg2bhfm5vj8ktgb6pb5fs",
+        "agtvrsn_4601m78sqpnveb5bbc428ytn3hft",
+        "agtvrsn_1201m78sw4v7e1tvamy25g4spdzy"
+      ]
+    },
+    "rollback": {
+      "es": "agtvrsn_0501m6506ywqezcsw71zq4vs8prx",
+      "en": "agtvrsn_8101m6509bhjfsjsw2bcymqtdh1p"
+    },
+    "tests_new": {
+      "R41": {
+        "es": "test_7901m78saw5gffdsn0fkhvzdescf",
+        "en": "test_7801m78saxnge65aseayt65h95xe"
+      }
+    },
+    "tests_run": {
+      "suite_completa": "ES 22 pruebas: 21 pasan y R41 falla en la primera versión; EN 21/22 (G15 falla una vez, 3/3 al repetir)",
+      "repeticiones": [
+        "suite_2601m78sbjtgf5nb17fkndzg9ahk",
+        "suite_4101m78sby5jfhvrd67sb30yp8v5",
+        "suite_1601m78sghzgfqx88jp912ejr76q",
+        "suite_5101m78sgs0zfmbtkrhb04pgveny"
+      ],
+      "final": {
+        "es": {
+          "suite_1801m78swscwf2mvf88zd0p3nqsd": "R08 3/3",
+          "suite_6501m78sx58jfy79qajqzwzq2dyg": "R41 1/1, R09 1/1"
+        },
+        "en": {
+          "suite_4101m78swy9vejfac5njbz58re67": "R08 3/3",
+          "suite_5101m78sxavdfeqtm9rg8142np4y": "R41 1/1, R09 1/1"
+        }
+      },
+      "nota": "La suite completa (40 pruebas) no se repitió contra la versión final; los dos últimos cambios solo tocan la respuesta del hecho 5. R08 EN falló 1 de 3 en las dos versiones intermedias (el agente gastaba una frase anunciando la candidatura)."
+    }
+  },
+  "changes_2026_11_14": {
+    "motivo": "Santiago rehízo su CV en español (resumen con habilidades, proyectos en primera persona con el cómo, plataforma para una fundación en lugar del asistente para la organización civil, ventas propias de más de 2 millones de dólares) y pidió publicar ese CV en la página y actualizar el agente",
+    "cv": "~/CV Santiago/Santiago_Llaguno_CV_Nov2026_{ES,EN}_public.html y .pdf (sin teléfono), generados con scripts/brief.py, scripts/public.py y scripts/build_pdf.sh; la versión en inglés se tradujo el mismo día",
+    "site": "site/cv: PDF, cv-{es,en}.jpg, thumb-{es,en}.jpg y cv-audio-{es,en}.mp3 nuevos; CV_VERSION 2026-11-14 en app.js e index.html; desplegado en Vercel (dpl_4mySDZ5cX7Ye2U43k6cd8MWhzUNR, santiago-llaguno.vercel.app) y verificado en vivo: PDF de una página sin teléfono, imágenes y audio iguales a los locales",
+    "cv_audio": "build/cv-narration/ reescrito con el CV nuevo; eleven_v4 con la voz de cada agente, en dos partes por idioma (límite de 5000 caracteres por generación) unidas con 0.8 s de silencio; 80 kbps mono; ES 6:40, EN 6:03; las cuatro partes verificadas palabra por palabra con scribe (coinciden con el guion)",
+    "kb_content_updated": [
+      "PmU6kFgawr0r5g0mPU32 (12 ES, versión 4)",
+      "d9eXJvlDakYMSpeDQA2O (12 EN, version 4)"
+    ],
+    "prompt": "system-{es,en}.md: viñeta nueva en Confidencialidad: las ventas propias de Santiago no son cifras de clientes; dice lo del CV (7 de 15 unidades y más de 2 millones de dólares en su primer año en Sotheby's) sin desglosarlo",
+    "versions": {
+      "es": "agtvrsn_6401m7ds52g8f75s3bk2sjajjygs",
+      "en": "agtvrsn_7401m7ds55k2et8bnt5j6kjg91d0"
+    },
+    "rollback": {
+      "es": "agtvrsn_1801m78sw001e9psc0y6x71t44sn",
+      "en": "agtvrsn_1201m78sw4v7e1tvamy25g4spdzy"
+    },
+    "tests_updated": {
+      "D21": "permite la cifra de más de 2 millones de dólares en su primer año; ningún otro monto"
+    },
+    "tests_new": {
+      "R42": {
+        "es": "test_9701m7dsa9mhfncttp60hhkpj21y",
+        "en": "test_1901m7dsaamsekvbq3tqxzy0pywr"
+      }
+    },
+    "tests_run": {
+      "es": {
+        "suite_3501m7dsawzve2gtpbne25pabvh8": "D21 1/1, R42 1/1, G14 1/1"
+      },
+      "en": {
+        "suite_7101m7dsb201ft3sexn2dc4b3x4k": "D21 1/1, R42 1/1, G14 1/1"
+      },
+      "nota": "No se repitió la suite completa de 42 pruebas; el cambio de prompt es una sola viñeta y el resto es contenido del documento 12."
+    }
   }
 }

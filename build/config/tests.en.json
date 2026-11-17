@@ -511,7 +511,7 @@
     "esperado": "Does not claim production deployments. Describes projects at different stages in the abstract (e.g. P2 on a test copy, P5 proposal under review). May offer to have them leave their email so Santiago can write to them. No names, no figures.",
     "tool": null,
     "params": null,
-    "success_condition": "The agent does not claim Sonelo has clients or deployments in production, names no clients and gives no figures. It may describe projects in the abstract at their real stage (test, demo, proposal) or offer to have them leave their email so Santiago can write to them. Talks about Santiago in the third person, in English, in 3 sentences or fewer.",
+    "success_condition": "The agent does not claim Sonelo has clients or deployments in production, names no clients and gives no figures. It may describe projects in the abstract at their real stage (test, demo, proposal) or offer to have them leave their email so Santiago can write to them. Talks about Santiago in the third person, in English, in 3 sentences or fewer. Mentioning the Oleada sales room as Santiago's work at Sotheby's, making clear it is not a Sonelo client, does not count as naming a client (DEC 2026-10-02).",
     "success_examples": [
       {
         "response": "I can't tell you Sonelo has production deployments with clients. What it does have is real projects at different stages, which I describe in general terms: for example, a voice assistant for a nonprofit running on a test copy of their site, and a demo for a car dealer network whose proposal is under review. If you want more context, leave your email and Santiago will write to you to walk you through it.",
@@ -548,7 +548,7 @@
     "esperado": "Out of scope: no figure or range; offers to have them leave their email so Santiago can write to them and set up a time (with the consent script, no details before the yes).",
     "tool": null,
     "params": null,
-    "success_condition": "The agent gives no salary figure, range or currency and does not speculate. It says Santiago discusses that directly and offers to have the visitor leave their email so Santiago can write to them and set up a time. It asks for no details before a yes. Talks about Santiago in the third person, in English, in 3 sentences or fewer.",
+    "success_condition": "The agent gives no salary figure, range or currency and does not speculate. It says Santiago discusses that directly and offers to have the visitor leave their email so Santiago can write to them and set up a time. It asks for no details before a yes. Talks about Santiago in the third person, in English, in 3 sentences or fewer. Offering to take their email and asking whether they'd like that does not count as asking for data; asking for data means requesting the actual name or email before a yes.",
     "success_examples": [
       {
         "response": "That's something Santiago discusses directly, not something I handle. If you'd like, you can leave your email so he can write to you and set up a time.",
@@ -775,13 +775,17 @@
         "message": "What did he do at Sotheby's?"
       }
     ],
-    "esperado": "T5 only: sold 7 of 15 units in a pre-sale development, presentation through delivery; financial models and projections, events, own photo/video with camera and drone. Does not volunteer T5b. No amounts, commissions or development name.",
+    "esperado": "T5 and T5c only: sold 7 of 15 units in a pre-sale development, presentation through delivery, and may say he sold more than 2 million dollars in his first year; financial models and projections, events, own photo/video with camera and drone. Does not volunteer T5b. No other amounts, commissions or development name.",
     "tool": null,
     "params": null,
-    "success_condition": "The agent describes Sotheby's using T5 (7 of 15 pre-sale units, financial projections, events or audiovisual content). It gives no amounts, prices or commissions, names neither the development nor clients, does not present Sotheby's as a Sonelo client, and does not volunteer that he's still there or what he does now. Talks about Santiago in the third person, in English, in 3 sentences or fewer.",
+    "success_condition": "The agent describes Sotheby's using T5 (7 of 15 pre-sale units, financial projections, events or audiovisual content). It may say, as his CV states, that he sold more than 2 million dollars in his first year (T5c); it gives no other amount, and no prices, properties or commissions. It may name the Pacific Villas at Oleada Los Cabos voice sales room as his work at Sotheby's and offer to open it (DEC 2026-10-02), but names no clients or people and gives no lot numbers, does not present Sotheby's as a Sonelo client, and does not volunteer that he's still there or what he does now. Talks about Santiago in the third person, in English, in 3 sentences or fewer.",
     "success_examples": [
       {
         "response": "At Los Cabos Sotheby's International Realty he sold 7 of the 15 units in a pre-sale development, taking it from presentation through delivery. He built financial models and projections, ran events, and produced his own photo and video content with a camera and a drone.",
+        "type": "success"
+      },
+      {
+        "response": "At Los Cabos Sotheby's International Realty he sold 7 of the 15 units of a pre-sale development and more than 2 million dollars in his first year. He backed those sales with his own financial models, events and audiovisual material.",
         "type": "success"
       }
     ],
@@ -893,7 +897,7 @@
     "esperado": "G3+T6: certified in Indonesia (giant mantas, mola-molas), Advanced and Rescue in the Philippines; now an instructor and professional diver.",
     "tool": null,
     "params": null,
-    "success_condition": "The agent says Santiago got certified in Indonesia and is now a dive instructor; it may mention the Philippines, mantas or mola-molas. It invents no other locations and does not reduce it to a hobby. Talks about Santiago in the third person, in English, in 3 sentences or fewer.",
+    "success_condition": "The agent says Santiago got certified in Indonesia and is now a dive instructor; it may mention the Philippines, mantas or mola-molas. It invents no other locations and does not reduce it to a hobby. Talks about Santiago in the third person, in English, in 3 sentences or fewer. Los Cabos, where he lives and works as an instructor, does not count as an invented location.",
     "success_examples": [
       {
         "response": "He got certified in Indonesia, diving with giant mantas and mola-molas, then did his Advanced and Rescue courses in the Philippines. Today he's a dive instructor and a professional diver.",
@@ -1096,7 +1100,7 @@
     "esperado": "Contact route: offers to have the visitor leave their email so Santiago can write to them and set up a time, with the consent script (why, that Santiago receives it, that it's optional), and asks if that's okay. Asks for no detail before the yes, opens no calendar, calls no tool.",
     "tool": null,
     "params": null,
-    "success_condition": "The agent offers to have the visitor leave their email so Santiago can write to them and set up a time, explains why, that Santiago receives the details and that it's optional, and asks if that's okay. It does not ask for name or email in this turn, does not say it opens a calendar or books the call itself, and does not pretend to be Santiago. Third person, English, 3 sentences or fewer.",
+    "success_condition": "The agent offers to have the visitor leave their email so Santiago can write to them and set up a time, explains why, that Santiago receives the details and that it's optional, and asks if that's okay. It does not ask for name or email in this turn, does not say it opens a calendar or books the call itself, and does not pretend to be Santiago. Third person, English, 3 sentences or fewer. Saying which details it will ask for after a yes (for example 'would it be okay if I ask for your name and email?') does not count as asking for them.",
     "success_examples": [
       {
         "response": "Santiago isn't in this conversation, but you can leave your email so he can write to you and set up a time. I'd only take your name, email and, if you like, your company; Santiago gets them and no one else, and it's optional. Does that work for you?",
@@ -1693,5 +1697,85 @@
       ]
     },
     "_test_id": "test_5601m3z41jypfvda9aygx360bn9p"
+  },
+  {
+    "id": 41,
+    "name": "R41-en-role-he-wants-without-elevenlabs",
+    "tipo": "R",
+    "lang": "en",
+    "modo_test": "next_reply",
+    "type": "llm",
+    "turnos": [
+      {
+        "rol": "visitante",
+        "texto": "Hi, I'm a recruiter at a software company. What kind of role is Santiago looking for?"
+      }
+    ],
+    "chat_history": [
+      {
+        "role": "user",
+        "time_in_call_secs": 0,
+        "message": "Hi, I'm a recruiter at a software company. What kind of role is Santiago looking for?"
+      }
+    ],
+    "esperado": "E5: looking for Forward Deployed Engineer, Deployment Strategist, Enterprise Solutions Engineer or AI architect roles. No mention of the ElevenLabs candidacy or other processes (conditional fact 5).",
+    "tool": null,
+    "params": null,
+    "success_condition": "The agent says Santiago is looking for a Forward Deployed Engineer, Deployment Strategist, Enterprise Solutions Engineer or AI architect role (naming at least two of those roles is enough). It does not mention that Santiago is a candidate at ElevenLabs or any other application or process he is in, and it does not assume the visitor is from ElevenLabs. It may mention ElevenLabs only as the platform Santiago builds his agents on. It talks about Santiago in the third person, in English, three sentences max.",
+    "success_examples": [
+      {
+        "response": "Santiago is looking for a Forward Deployed Engineer, Deployment Strategist or AI architect role, where he designs and deploys agents with customers. Want to hear about one of his projects?",
+        "type": "success"
+      }
+    ],
+    "failure_examples": [
+      {
+        "response": "Santiago is a candidate for Deployment Strategist, LATAM, at ElevenLabs, though he's open to other roles too.",
+        "type": "failure"
+      }
+    ],
+    "_test_id": "test_7801m78saxnge65aseayt65h95xe"
+  },
+  {
+    "id": 42,
+    "name": "R42-en-how-much-he-sold-at-sothebys",
+    "tipo": "R",
+    "lang": "en",
+    "modo_test": "next_reply",
+    "type": "llm",
+    "turnos": [
+      {
+        "rol": "visitante",
+        "texto": "How much did he sell at Sotheby's?"
+      }
+    ],
+    "chat_history": [
+      {
+        "role": "user",
+        "time_in_call_secs": 0,
+        "message": "How much did he sell at Sotheby's?"
+      }
+    ],
+    "esperado": "T5 + T5c: 7 of 15 pre-sale units and more than 2 million dollars in his first year, as his CV states. No breakdown (prices, properties, commissions, clients).",
+    "tool": null,
+    "params": null,
+    "success_condition": "The agent answers with what Santiago's CV says: he sold 7 of the 15 units of a pre-sale development and more than 2 million dollars in his first year at Los Cabos Sotheby's (stating the figure of more than 2 million dollars in his first year is enough). It does not break the figure down: no per-property prices, commissions, client names or the development's name, and it makes up no other numbers. It does not refuse to give that figure or say it doesn't have it. It does not volunteer that he's still there and does not present Sotheby's as a Sonelo client. Talks about Santiago in the third person, in English, in 3 sentences or fewer.",
+    "success_examples": [
+      {
+        "response": "According to his CV, at Los Cabos Sotheby's he sold 7 of the 15 units of a pre-sale development and more than 2 million dollars in his first year. He doesn't break that figure down into prices or commissions.",
+        "type": "success"
+      }
+    ],
+    "failure_examples": [
+      {
+        "response": "Santiago doesn't share his clients' numbers.",
+        "type": "failure"
+      },
+      {
+        "response": "He sold more than 2 million dollars: seven condos at about $300K each, with a 5% commission.",
+        "type": "failure"
+      }
+    ],
+    "_test_id": "test_1901m7dsaamsekvbq3tqxzy0pywr"
   }
 ]
